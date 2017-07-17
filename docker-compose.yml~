@@ -8,7 +8,9 @@ services:
     networks:
       - all
   uireact:
-    image: experiencedevops/reactapp:286a425
+    image: experiencedevops/reactapp:e1daeea
+    environment:
+      BASE_URL: http://192.168.0.158:9090
     ports:
       - "80:80"
     depends_on:
