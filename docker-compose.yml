@@ -1,0 +1,20 @@
+version: '2'
+services:
+
+  microservice:
+    image: finalcustomerservice:latest
+    ports:
+      - "9090:9090"
+    networks:
+      - all
+  uireact:
+    image: experiencedevops/reactapp:286a425
+    ports:
+      - "80:80"
+    depends_on:
+      - microservice
+    networks:
+      - all
+
+networks:
+  all:
