@@ -9,6 +9,8 @@ services:
       - all
   uireact:
     image: experiencedevops/reactapp:286a425
+    environment:
+      BASE_URL: http://localhost:9090
     ports:
       - "80:80"
     depends_on:
